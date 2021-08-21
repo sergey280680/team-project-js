@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="header__navigation container">
+    <nav class="header__menu">
+      <!--Logo -->
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo--link">
+          <svg class="icon--logo" width="24" height="24">
+            <use class="logo__icone" href="./images/symbol-defs.svg#icon-film-1"></use>
+          </svg>
+          <span class="logo__title">Filmoteka </span>
+        </a>
+      </div>
+
+      <!-- menu navigation -->
+      <ul class="header__list">
+        <li><a href="#" class="header__link header__link--current js-home">Home</a></li>
+        <li><a href="#" class="header__link js-library">my library</a></li>
+      </ul>
+    </nav>
+    <!-- скрыть форму при классе хиден -->
+    <div class="header__form--visibel">
+      <form class="header__form" autocomplete="off">
+        <label class="header__form--subscribe">
+          <input
+            class="header-input header__form--input"
+            type="text"
+            name="user_text"
+            placeholder="Поиск фильмов"
+          />
+        </label>
+        <button class="header__form--button" type="submit">
+          <svg class="header__form--icon" width="12" height="12">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <!-- скрыть ошибку при классе хиден -->
+      <p class="header__notice hidden">
+        Search result not successful. Enter the correct movie name and try again
+      </p>
+    </div>
+    <!-- скрыть/добавить кнопки для станицы home -->
+    <div class="header__block--button hidden">
+      <ul class="header__list--button">
+        <li><button class="header__button--library js-watched" type="button">Watched</button></li>
+        <li><button class="header__button--library js-queue" type="button">queue</button></li>
+      </ul>
+    </div>
+    <div class="theme-switch">
+      <svg class="theme-switch__icon icon-sun hidden" id="sun" aria-label="Иконка солнца">
+        <use href="./images/sprite.svg#sun"></use>
+      </svg>
+      <svg class="theme-switch__icon icon-moon" id="moon" aria-label="Иконка луны">
+        <use href="./images/sprite.svg#moon"></use>
+      </svg>
+    </div>
+  </div>
+</header>

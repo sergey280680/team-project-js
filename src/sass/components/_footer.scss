@@ -1,0 +1,53 @@
+.footer{
+   background-color: $greyfooter;
+}
+
+.footer__container{
+width: 250px; 
+text-align: center; 
+@include beforeTablet{
+padding-top:28.7px ;
+padding-bottom: 28.5px;
+padding-left: 0;
+padding-right: 0;
+
+
+} 
+@include tablet {
+padding-top: 30px ;
+padding-bottom: 28px;
+width: 100%;
+}
+}
+
+.footer__logo--web{
+   display: inline-flex;
+width: 187px; 
+margin-bottom: 10px;
+
+  @include tablet{
+     display:inline;
+      width: 100%;
+    margin-bottom: 0px;
+
+  }
+}
+
+.footer__link{
+text-align: center;
+color: $darkGrey;
+font-family : $ffRegular; 
+font-size: var(--font-size14);
+}
+
+.footer__form--icon{
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+.footer__students{
+   color: $darkGrey;
+   font-family : $ffRegular; 
+   font-size: var(--font-size14);
+   text-decoration: underline;
+}

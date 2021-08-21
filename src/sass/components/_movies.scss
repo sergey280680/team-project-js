@@ -1,0 +1,79 @@
+main {
+  flex-grow: 1;
+}
+
+.film {
+  padding-top: 28px;
+  padding-bottom: 40px;
+  @include tablet {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+
+.film__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 0 auto;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.film__img-thumb {
+  //height: 398px;
+  height: 126vw;
+  min-width: 274px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: url('../images/default_cover.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include tablet {
+    width: 294px;
+    height: 398px;
+  }
+  @include desktop {
+    width: 274px;
+  }
+  img {
+    object-fit: cover;
+
+    @include tablet {
+      object-fit: fill;
+    }
+  }
+}
+.film__name {
+  font-family: $ffMedium;
+  font-size: var(--font-size12);
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: $black;
+}
+
+.film__text {
+  font-family: $ffMedium;
+  font-size: var(--font-size12);
+  line-height: 1.33;
+  color: $orange;
+  margin-top: 5px;
+}
+
+.film__item:hover img,
+.film__item:focus img {
+  transform: scale(1.05);
+}
+
+.film__item img {
+  transition: transform 250ms;
+}

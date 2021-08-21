@@ -1,0 +1,37 @@
+<div class='cover-film'>
+  <img class='film-img lazyload' data-src='{{poster}}' alt='{{title}}' loading='lazy' />
+</div>
+
+<div class='film-modal'>
+  <h2 class='film-modal__name'>{{title}}</h2>
+  <ul class='film-grade__list'>
+    <li class='film-grade__item'>
+      <span class='film-grade__item-static'>Vote / Votes</span><span
+        class='grade'
+      >{{vote_average}}</span>
+      &nbsp/
+      {{vote_count}}
+    </li>
+
+    <li class='film-grade__item'>
+      <span class='film-grade__item-static'>Popularity</span>{{popularity}}
+    </li>
+
+    <li class='film-grade__item film-grade__item--uppercase'>
+      <span class='film-grade__item-static'>Original Title</span>{{original_title}}
+    </li>
+
+    <li class='film-grade__item'>
+      <span class='film-grade__item-static'>Genre</span>{{#each genres}}{{this}}{{#unless @last}},
+        {{/unless}}{{/each}}
+    </li>
+  </ul>
+
+  <h3 class='film-modal__about'>ABOUT</h3>
+  <p class='film-modal__description'>{{overview}}</p>
+
+  <div class='film-modal__button'>
+    <button id='modal-watched-btn' class='modal-button btn__watched'>ADD TO WATCHED</button>
+    <button id='modal-queue-btn' class='modal-button btn__queue'>ADD TO QUEUE</button>
+  </div>
+</div>
